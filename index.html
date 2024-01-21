@@ -716,6 +716,8 @@
             <img id="i13-13" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
         </div>
     </div>
+
+    <body></body>
 </html>
 
 <script src="jquery-3.7.1.min.js"></script>
@@ -736,6 +738,7 @@
 
         $.ajax({
             url: "script.py",
+            context: document.body,
             success: function(response) 
             {
                 console.log("Risposta dal server:", response);

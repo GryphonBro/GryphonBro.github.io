@@ -1,24 +1,14 @@
 import torch
-import urllib.request
+import requests
 from bs4 import BeautifulSoup
+from flask import Flask
 
-def getHtml(url)
-    # Fetch the html file
-    response = urllib.request.urlopen('file:///D:/GrAIphon/sito/main.html')
-    html_doc = response.read()
+@app.route("/")
+def html_grid_to_tensor():
+    
+    response = requests.get("https://gryphonbro.github.io")
+    return(response)
 
-    # Parse the html file
-    soup = BeautifulSoup(html_doc, 'html.parser')
-
-    # Format the parsed html file
-    strhtm = soup.prettify()
-
-    # Print the first few characters
-    print (strhtm[:225])    
-
-
-def html_grid_to_tensor(html):
-    # Analizza la griglia HTML utilizzando BeautifulSoup
     soup = BeautifulSoup(html, 'html.parser')
     
     # Trova tutti gli elementi div con classe "grid-item"
@@ -54,4 +44,4 @@ def html_grid_to_tensor(html):
     # Converte la lista dei dati in un tensore PyTorch
     tensor = torch.tensor(data).view(1, 13, 13)
 
-    return tensor
+    tensor
