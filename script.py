@@ -1,7 +1,7 @@
 import torch
 import requests
 from bs4 import BeautifulSoup
-from flask import Flask
+from flask import Flask, jsonify
 
 @app.route("/")
 def html_grid_to_tensor():
@@ -44,4 +44,7 @@ def html_grid_to_tensor():
     # Converte la lista dei dati in un tensore PyTorch
     tensor = torch.tensor(data).view(1, 13, 13)
 
-    tensor
+    return jsonify(tensor.tolist())
+
+if __name__ == "__main__":
+    app.run(debug=True)
