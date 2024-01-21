@@ -739,6 +739,17 @@
         $.ajax({
             url: "script.py",
             context: document.body,
+            success: function(response) 
+            {
+                // Il valore del tensore è contenuto nella risposta JSON
+                var tensorValue = response;
+
+                // Ora puoi fare qualcosa con il valore del tensore, ad esempio stamparlo nella console
+                consol.log(tensorValue);
+            },
+            error: function(xhr, status, error) {
+                console.error("Errore durante la chiamata AJAX:", status, error);
+            }
         });
     }
 
