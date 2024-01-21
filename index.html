@@ -737,13 +737,14 @@
         checkwin();
 
         $.ajax({
-            url: "script.py",
+            url: "tensor.py",
             context: document.body,
             success: function(response) 
             {
                 console.log("Risposta dal server:", response);
             },
-            error: function(xhr, status, error) {
+            error: function(xhr, status, error) 
+            {
                 console.error("Errore durante la chiamata AJAX:", status, error);
             }
         });
