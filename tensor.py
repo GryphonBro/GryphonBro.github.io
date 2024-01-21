@@ -3,6 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 from flask import Flask, jsonify
 
+app = Flask(__name__)
+
 @app.route("/")
 def html_grid_to_tensor():
     
