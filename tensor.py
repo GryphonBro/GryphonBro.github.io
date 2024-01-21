@@ -8,8 +8,7 @@ app = Flask(__name__)
 @app.route("/")
 def html_grid_to_tensor():
     
-    response = requests.get("https://gryphonbro.github.io")
-    return(response)
+    html = requests.get("https://gryphonbro.github.io")
 
     soup = BeautifulSoup(html, 'html.parser')
     
