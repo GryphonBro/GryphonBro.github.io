@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<br>
+<html>
+    <head>
+        <style>
+            .grid-container 
+            {
+                display: grid;
+                grid-template-columns: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+                grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+                background-color: rgb(255, 255, 255);
+                padding: 10px;
+            }
+            .grid-item 
+            {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 8px;
+            text-align: center;
+            }
+            .small_btn
+            {
+                width: 40px;
+                height: 40px;
+                position: relative;
+                left: -20px;
+                top: -20px;
+            }
+            .imgc
+            {
+                width: 20px;
+                height: 20px;
+                position: relative;
+                left: -10px;
+                top: -10px;
+            }
+        </style>
+    </head>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <button type = "button" id = "1-1" onclick = "play(1, 1)" class = "small_btn">1-1</button>
+            <img id="i1-1" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "1-2" onclick = "play(1, 2)" class = "small_btn">1-2</button>
+            <img id="i1-2" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "1-3" onclick = "play(1, 3)" class = "small_btn">1-3</button>
+            <img id="i1-3" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "1-4" onclick = "play(1, 4)" class = "small_btn">1-4</button>
+            <img id="i1-4" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "1-5" onclick = "play(1, 5)" class = "small_btn">1-5</button>
+            <img id="i1-5" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "1-6" onclick = "play(1, 6)" class = "small_btn">1-6</button>
+            <img id="i1-6" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "1-7" onclick = "play(1, 7)" class = "small_btn">1-7</button>
+            <img id="i1-7" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "1-8" onclick = "play(1, 8)" class = "small_btn">1-8</button>
+            <img id="i1-8" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "1-9" onclick = "play(1, 9)" class = "small_btn">1-9</button>
+            <img id="i1-9" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "1-10" onclick = "play(1, 10)" class = "small_btn">1-10</button>
+            <img id="i1-10" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "1-11" onclick = "play(1, 11)" class = "small_btn">1-11</button>
+            <img id="i1-11" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "1-12" onclick = "play(1, 12)" class = "small_btn">1-12</button>
+            <img id="i1-12" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "1-13" onclick = "play(1, 13)" class = "small_btn">1-13</button>
+            <img id="i1-13" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "2-1" onclick = "play(2, 1)" class = "small_btn">2-1</button>
+            <img id="i2-1" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "2-2" onclick = "play(2, 2)" class = "small_btn">2-2</button>
+            <img id="i2-2" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "2-3" onclick = "play(2, 3)" class = "small_btn">2-3</button>
+            <img id="i2-3" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "2-4" onclick = "play(2, 4)" class = "small_btn">2-4</button>
+            <img id="i2-4" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "2-5" onclick = "play(2, 5)" class = "small_btn">2-5</button>
+            <img id="i2-5" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "2-6" onclick = "play(2, 6)" class = "small_btn">2-6</button>
+            <img id="i2-6" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "2-7" onclick = "play(2, 7)" class = "small_btn">2-7</button>
+            <img id="i2-7" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "2-8" onclick = "play(2, 8)" class = "small_btn">2-8</button>
+            <img id="i2-8" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "2-9" onclick = "play(2, 9)" class = "small_btn">2-9</button>
+            <img id="i2-9" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "2-10" onclick = "play(2, 10)" class = "small_btn">2-10</button>
+            <img id="i2-10" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "2-11" onclick = "play(2, 11)" class = "small_btn">2-11</button>
+            <img id="i2-11" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "2-12" onclick = "play(2, 12)" class = "small_btn">2-12</button>
+            <img id="i2-12" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "2-13" onclick = "play(2, 13)" class = "small_btn">2-13</button>
+            <img id="i2-13" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "3-1" onclick = "play(3, 1)" class = "small_btn">3-1</button>
+            <img id="i3-1" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "3-2" onclick = "play(3, 2)" class = "small_btn">3-2</button>
+            <img id="i3-2" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "3-3" onclick = "play(3, 3)" class = "small_btn">3-3</button>
+            <img id="i3-3" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "3-4" onclick = "play(3, 4)" class = "small_btn">3-4</button>
+            <img id="i3-4" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "3-5" onclick = "play(3, 5)" class = "small_btn">3-5</button>
+            <img id="i3-5" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "3-6" onclick = "play(3, 6)" class = "small_btn">3-6</button>
+            <img id="i3-6" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "3-7" onclick = "play(3, 7)" class = "small_btn">3-7</button>
+            <img id="i3-7" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "3-8" onclick = "play(3, 8)" class = "small_btn">3-8</button>
+            <img id="i3-8" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "3-9" onclick = "play(3, 9)" class = "small_btn">3-9</button>
+            <img id="i3-9" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "3-10" onclick = "play(3, 10)" class = "small_btn">3-10</button>
+            <img id="i3-10" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "3-11" onclick = "play(3, 11)" class = "small_btn">3-11</button>
+            <img id="i3-11" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "3-12" onclick = "play(3, 12)" class = "small_btn">3-12</button>
+            <img id="i3-12" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "3-13" onclick = "play(3, 13)" class = "small_btn">3-13</button>
+            <img id="i3-13" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "4-1" onclick = "play(4, 1)" class = "small_btn">4-1</button>
+            <img id="i4-1" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "4-2" onclick = "play(4, 2)" class = "small_btn">4-2</button>
+            <img id="i4-2" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "4-3" onclick = "play(4, 3)" class = "small_btn">4-3</button>
+            <img id="i4-3" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "4-4" onclick = "play(4, 4)" class = "small_btn">4-4</button>
+            <img id="i4-4" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "4-5" onclick = "play(4, 5)" class = "small_btn">4-5</button>
+            <img id="i4-5" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "4-6" onclick = "play(4, 6)" class = "small_btn">4-6</button>
+            <img id="i4-6" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "4-7" onclick = "play(4, 7)" class = "small_btn">4-7</button>
+            <img id="i4-7" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "4-8" onclick = "play(4, 8)" class = "small_btn">4-8</button>
+            <img id="i4-8" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "4-9" onclick = "play(4, 9)" class = "small_btn">4-9</button>
+            <img id="i4-9" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "4-10" onclick = "play(4, 10)" class = "small_btn">4-10</button>
+            <img id="i4-10" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "4-11" onclick = "play(4, 11)" class = "small_btn">4-11</button>
+            <img id="i4-11" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "4-12" onclick = "play(4, 12)" class = "small_btn">4-12</button>
+            <img id="i4-12" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "4-13" onclick = "play(4, 13)" class = "small_btn">4-13</button>
+            <img id="i4-13" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "5-1" onclick = "play(5, 1)" class = "small_btn">5-1</button>
+            <img id="i5-1" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "5-2" onclick = "play(5, 2)" class = "small_btn">5-2</button>
+            <img id="i5-2" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "5-3" onclick = "play(5, 3)" class = "small_btn">5-3</button>
+            <img id="i5-3" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "5-4" onclick = "play(5, 4)" class = "small_btn">5-4</button>
+            <img id="i5-4" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "5-5" onclick = "play(5, 5)" class = "small_btn">5-5</button>
+            <img id="i5-5" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "5-6" onclick = "play(5, 6)" class = "small_btn">5-6</button>
+            <img id="i5-6" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "5-7" onclick = "play(5, 7)" class = "small_btn">5-7</button>
+            <img id="i5-7" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "5-8" onclick = "play(5, 8)" class = "small_btn">5-8</button>
+            <img id="i5-8" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "5-9" onclick = "play(5, 9)" class = "small_btn">5-9</button>
+            <img id="i5-9" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "5-10" onclick = "play(5, 10)" class = "small_btn">5-10</button>
+            <img id="i5-10" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "5-11" onclick = "play(5, 11)" class = "small_btn">5-11</button>
+            <img id="i5-11" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "5-12" onclick = "play(5, 12)" class = "small_btn">5-12</button>
+            <img id="i5-12" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "5-13" onclick = "play(5, 13)" class = "small_btn">5-13</button>
+            <img id="i5-13" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "6-1" onclick = "play(6, 1)" class = "small_btn">6-1</button>
+            <img id="i6-1" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "6-2" onclick = "play(6, 2)" class = "small_btn">6-2</button>
+            <img id="i6-2" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "6-3" onclick = "play(6, 3)" class = "small_btn">6-3</button>
+            <img id="i6-3" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "6-4" onclick = "play(6, 4)" class = "small_btn">6-4</button>
+            <img id="i6-4" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "6-5" onclick = "play(6, 5)" class = "small_btn">6-5</button>
+            <img id="i6-5" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "6-6" onclick = "play(6, 6)" class = "small_btn">6-6</button>
+            <img id="i6-6" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "6-7" onclick = "play(6, 7)" class = "small_btn">6-7</button>
+            <img id="i6-7" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "6-8" onclick = "play(6, 8)" class = "small_btn">6-8</button>
+            <img id="i6-8" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "6-9" onclick = "play(6, 9)" class = "small_btn">6-9</button>
+            <img id="i6-9" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "6-10" onclick = "play(6, 10)" class = "small_btn">6-10</button>
+            <img id="i6-10" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "6-11" onclick = "play(6, 11)" class = "small_btn">6-11</button>
+            <img id="i6-11" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "6-12" onclick = "play(6, 12)" class = "small_btn">6-12</button>
+            <img id="i6-12" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "6-13" onclick = "play(6, 13)" class = "small_btn">6-13</button>
+            <img id="i6-13" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "7-1" onclick = "play(7, 1)" class = "small_btn">7-1</button>
+            <img id="i7-1" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "7-2" onclick = "play(7, 2)" class = "small_btn">7-2</button>
+            <img id="i7-2" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "7-3" onclick = "play(7, 3)" class = "small_btn">7-3</button>
+            <img id="i7-3" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "7-4" onclick = "play(7, 4)" class = "small_btn">7-4</button>
+            <img id="i7-4" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "7-5" onclick = "play(7, 5)" class = "small_btn">7-5</button>
+            <img id="i7-5" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "7-6" onclick = "play(7, 6)" class = "small_btn">7-6</button>
+            <img id="i7-6" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "7-7" onclick = "play(7, 7)" class = "small_btn">7-7</button>
+            <img id="i7-7" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "7-8" onclick = "play(7, 8)" class = "small_btn">7-8</button>
+            <img id="i7-8" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "7-9" onclick = "play(7, 9)" class = "small_btn">7-9</button>
+            <img id="i7-9" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "7-10" onclick = "play(7, 10)" class = "small_btn">7-10</button>
+            <img id="i7-10" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "7-11" onclick = "play(7, 11)" class = "small_btn">7-11</button>
+            <img id="i7-11" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "7-12" onclick = "play(7, 12)" class = "small_btn">7-12</button>
+            <img id="i7-12" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "7-13" onclick = "play(7, 13)" class = "small_btn">7-13</button>
+            <img id="i7-13" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "8-1" onclick = "play(8, 1)" class = "small_btn">8-1</button>
+            <img id="i8-1" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "8-2" onclick = "play(8, 2)" class = "small_btn">8-2</button>
+            <img id="i8-2" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "8-3" onclick = "play(8, 3)" class = "small_btn">8-3</button>
+            <img id="i8-3" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "8-4" onclick = "play(8, 4)" class = "small_btn">8-4</button>
+            <img id="i8-4" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "8-5" onclick = "play(8, 5)" class = "small_btn">8-5</button>
+            <img id="i8-5" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "8-6" onclick = "play(8, 6)" class = "small_btn">8-6</button>
+            <img id="i8-6" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "8-7" onclick = "play(8, 7)" class = "small_btn">8-7</button>
+            <img id="i8-7" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "8-8" onclick = "play(8, 8)" class = "small_btn">8-8</button>
+            <img id="i8-8" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "8-9" onclick = "play(8, 9)" class = "small_btn">8-9</button>
+            <img id="i8-9" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "8-10" onclick = "play(8, 10)" class = "small_btn">8-10</button>
+            <img id="i8-10" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "8-11" onclick = "play(8, 11)" class = "small_btn">8-11</button>
+            <img id="i8-11" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "8-12" onclick = "play(8, 12)" class = "small_btn">8-12</button>
+            <img id="i8-12" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "8-13" onclick = "play(8, 13)" class = "small_btn">8-13</button>
+            <img id="i8-13" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "9-1" onclick = "play(9, 1)" class = "small_btn">9-1</button>
+            <img id="i9-1" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "9-2" onclick = "play(9, 2)" class = "small_btn">9-2</button>
+            <img id="i9-2" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "9-3" onclick = "play(9, 3)" class = "small_btn">9-3</button>
+            <img id="i9-3" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "9-4" onclick = "play(9, 4)" class = "small_btn">9-4</button>
+            <img id="i9-4" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "9-5" onclick = "play(9, 5)" class = "small_btn">9-5</button>
+            <img id="i9-5" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "9-6" onclick = "play(9, 6)" class = "small_btn">9-6</button>
+            <img id="i9-6" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "9-7" onclick = "play(9, 7)" class = "small_btn">9-7</button>
+            <img id="i9-7" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "9-8" onclick = "play(9, 8)" class = "small_btn">9-8</button>
+            <img id="i9-8" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "9-9" onclick = "play(9, 9)" class = "small_btn">9-9</button>
+            <img id="i9-9" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "9-10" onclick = "play(9, 10)" class = "small_btn">9-10</button>
+            <img id="i9-10" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "9-11" onclick = "play(9, 11)" class = "small_btn">9-11</button>
+            <img id="i9-11" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "9-12" onclick = "play(9, 12)" class = "small_btn">9-12</button>
+            <img id="i9-12" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "9-13" onclick = "play(9, 13)" class = "small_btn">9-13</button>
+            <img id="i9-13" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "10-1" onclick = "play(10, 1)" class = "small_btn">10-1</button>
+            <img id="i10-1" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "10-2" onclick = "play(10, 2)" class = "small_btn">10-2</button>
+            <img id="i10-2" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "10-3" onclick = "play(10, 3)" class = "small_btn">10-3</button>
+            <img id="i10-3" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "10-4" onclick = "play(10, 4)" class = "small_btn">10-4</button>
+            <img id="i10-4" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "10-5" onclick = "play(10, 5)" class = "small_btn">10-5</button>
+            <img id="i10-5" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "10-6" onclick = "play(10, 6)" class = "small_btn">10-6</button>
+            <img id="i10-6" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "10-7" onclick = "play(10, 7)" class = "small_btn">10-7</button>
+            <img id="i10-7" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "10-8" onclick = "play(10, 8)" class = "small_btn">10-8</button>
+            <img id="i10-8" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "10-9" onclick = "play(10, 9)" class = "small_btn">10-9</button>
+            <img id="i10-9" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "10-10" onclick = "play(10, 10)" class = "small_btn">10-10</button>
+            <img id="i10-10" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "10-11" onclick = "play(10, 11)" class = "small_btn">10-11</button>
+            <img id="i10-11" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "10-12" onclick = "play(10, 12)" class = "small_btn">10-12</button>
+            <img id="i10-12" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "10-13" onclick = "play(10, 13)" class = "small_btn">10-13</button>
+            <img id="i10-13" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "11-1" onclick = "play(11, 1)" class = "small_btn">11-1</button>
+            <img id="i11-1" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "11-2" onclick = "play(11, 2)" class = "small_btn">11-2</button>
+            <img id="i11-2" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "11-3" onclick = "play(11, 3)" class = "small_btn">11-3</button>
+            <img id="i11-3" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "11-4" onclick = "play(11, 4)" class = "small_btn">11-4</button>
+            <img id="i11-4" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "11-5" onclick = "play(11, 5)" class = "small_btn">11-5</button>
+            <img id="i11-5" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "11-6" onclick = "play(11, 6)" class = "small_btn">11-6</button>
+            <img id="i11-6" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "11-7" onclick = "play(11, 7)" class = "small_btn">11-7</button>
+            <img id="i11-7" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "11-8" onclick = "play(11, 8)" class = "small_btn">11-8</button>
+            <img id="i11-8" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "11-9" onclick = "play(11, 9)" class = "small_btn">11-9</button>
+            <img id="i11-9" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "11-10" onclick = "play(11, 10)" class = "small_btn">11-10</button>
+            <img id="i11-10" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "11-11" onclick = "play(11, 11)" class = "small_btn">11-11</button>
+            <img id="i11-11" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "11-12" onclick = "play(11, 12)" class = "small_btn">11-12</button>
+            <img id="i11-12" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "11-13" onclick = "play(11, 13)" class = "small_btn">11-13</button>
+            <img id="i11-13" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "12-1" onclick = "play(12, 1)" class = "small_btn">12-1</button>
+            <img id="i12-1" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "12-2" onclick = "play(12, 2)" class = "small_btn">12-2</button>
+            <img id="i12-2" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "12-3" onclick = "play(12, 3)" class = "small_btn">12-3</button>
+            <img id="i12-3" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "12-4" onclick = "play(12, 4)" class = "small_btn">12-4</button>
+            <img id="i12-4" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "12-5" onclick = "play(12, 5)" class = "small_btn">12-5</button>
+            <img id="i12-5" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "12-6" onclick = "play(12, 6)" class = "small_btn">12-6</button>
+            <img id="i12-6" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "12-7" onclick = "play(12, 7)" class = "small_btn">12-7</button>
+            <img id="i12-7" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "12-8" onclick = "play(12, 8)" class = "small_btn">12-8</button>
+            <img id="i12-8" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "12-9" onclick = "play(12, 9)" class = "small_btn">12-9</button>
+            <img id="i12-9" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "12-10" onclick = "play(12, 10)" class = "small_btn">12-10</button>
+            <img id="i12-10" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "12-11" onclick = "play(12, 11)" class = "small_btn">12-11</button>
+            <img id="i12-11" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "12-12" onclick = "play(12, 12)" class = "small_btn">12-12</button>
+            <img id="i12-12" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "12-13" onclick = "play(12, 13)" class = "small_btn">12-13</button>
+            <img id="i12-13" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "13-1" onclick = "play(13, 1)" class = "small_btn">13-1</button>
+            <img id="i13-1" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "13-2" onclick = "play(13, 2)" class = "small_btn">13-2</button>
+            <img id="i13-2" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "13-3" onclick = "play(13, 3)" class = "small_btn">13-3</button>
+            <img id="i13-3" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "13-4" onclick = "play(13, 4)" class = "small_btn">13-4</button>
+            <img id="i13-4" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "13-5" onclick = "play(13, 5)" class = "small_btn">13-5</button>
+            <img id="i13-5" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "13-6" onclick = "play(13, 6)" class = "small_btn">13-6</button>
+            <img id="i13-6" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "13-7" onclick = "play(13, 7)" class = "small_btn">13-7</button>
+            <img id="i13-7" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "13-8" onclick = "play(13, 8)" class = "small_btn">13-8</button>
+            <img id="i13-8" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "13-9" onclick = "play(13, 9)" class = "small_btn">13-9</button>
+            <img id="i13-9" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "13-10" onclick = "play(13, 10)" class = "small_btn">13-10</button>
+            <img id="i13-10" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "13-11" onclick = "play(13, 11)" class = "small_btn">13-11</button>
+            <img id="i13-11" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "13-12" onclick = "play(13, 12)" class = "small_btn">13-12</button>
+            <img id="i13-12" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+        <div class="grid-item">
+            <button type = "button" id = "13-13" onclick = "play(13, 13)" class = "small_btn">13-13</button>
+            <img id="i13-13" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png?20060513000852" class = "imgc" title = "empty"/>
+        </div>
+    </div>
+</html>
+
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+    function play(row, column)
+    {
+        var button = row + "-" + column;
+        var image = "i" + button;
+
+        let im = document.getElementById(image);
+            im.src = "cerchi/blu.png"
+                document.getElementById(button)
+                .style.display = "none";
+        
+        im.title = "blue"
+
+        checkwin();
+
+        $.ajax({
+            url: "script.py",
+            success: function(response) 
+            {
+                console.log("Risposta dal server:", response);
+            },
+            error: function(xhr, status, error) 
+            {
+                console.error("Errore durante la chiamata AJAX:", status, error);
+            }
+        });
+    }
+
+    function checkwin()
+    {
+        //check win 5 in the same column
+        for(column = 1; column <= 13; column++)
+        {
+            column_nm = [];
+            for(row = 1; row <= 13; row++)
+            {
+                set = "i" + row + "-" + column;
+                let cell = document.getElementById(set);
+                state = cell.getAttribute("title");
+                column_nm.push(state);
+            }
+
+            for (let i = 0; i < column_nm.length; i++) 
+            {
+                if (column_nm[i] != "empty" && column_nm[i + 1] == column_nm[i] && column_nm[i + 2] == column_nm[i] && column_nm[i + 3] == column_nm[i] && column_nm[i + 3] == column_nm[i] && column_nm[i + 4] == column_nm[i] ) 
+                {
+                    document.write(column_nm);
+                    break;
+                } 
+            }
+        }
+        //check win 5 in the same row
+        for(row = 1; row <= 13; row++)
+        {
+            row_nm = [];
+            for(column = 1; column <= 13; column++)
+            {
+                set = "i" + row + "-" + column;
+                let cell = document.getElementById(set);
+                state = cell.getAttribute("title");
+                row_nm.push(state);
+            }
+
+            for (let i = 0; i < row_nm.length; i++) 
+            {
+                if (row_nm[i] != "empty" && row_nm[i + 1] == row_nm[i] && row_nm[i + 2] == row_nm[i] && row_nm[i + 3] == row_nm[i] && row_nm[i + 4] == row_nm[i] ) 
+                {
+                    document.write(row_nm);
+                    break;
+                } 
+            }
+        }
+        //check win 5 in diagonals tl to br by column
+        for (let diagonal = 1; diagonal <= 13; diagonal++) 
+        {
+            diagonal_nm = [];
+            for (let row = 1; row <= 13; row++) 
+            {
+                let column = diagonal + row - 1;
+                if (column <= 13) 
+                {
+                    let set = "i" + row + "-" + column;
+                    let cell = document.getElementById(set);
+                    let state = cell.getAttribute("title");
+                    diagonal_nm.push(state);
+                }
+            }
+            for (let i = 0; i < diagonal_nm.length - 4; i++) {
+                if (diagonal_nm[i] !== "empty" && diagonal_nm[i + 1] === diagonal_nm[i] && diagonal_nm[i + 2] === diagonal_nm[i] && diagonal_nm[i + 3] === diagonal_nm[i] && diagonal_nm[i + 4] === diagonal_nm[i]) 
+                {
+                    document.write(diagonal_nm);
+                    break;
+                }
+            }
+        }
+        //check win 5 in diagonals tl to br by row
+        for (let diagonal = 1; diagonal <= 13; diagonal++) 
+        {
+            diagonal_nm = [];
+            for (let column = 1; column <= 13; column++) 
+            {
+                let row = diagonal + column - 1;
+                if (row <= 13) 
+                {
+                    let set = "i" + row + "-" + column;
+                    let cell = document.getElementById(set);
+                    let state = cell.getAttribute("title");
+                    diagonal_nm.push(state); 
+                }
+            }
+            for (let i = 0; i < diagonal_nm.length - 4; i++) {
+                if (diagonal_nm[i] !== "empty" && diagonal_nm[i + 1] === diagonal_nm[i] && diagonal_nm[i + 2] === diagonal_nm[i] && diagonal_nm[i + 3] === diagonal_nm[i] && diagonal_nm[i + 4] === diagonal_nm[i]) 
+                {
+                    document.write(diagonal_nm);
+                    break;
+                }
+            }
+        }
+        //check win 5 in diagonals tr to bl by column
+        for (let diagonal = 1; diagonal <= 13; diagonal++) 
+        {
+            let reversedDiagonal = 14 - diagonal;
+            diagonal_nm = [];
+            for (let column = 1; column <= 13; column++) 
+            {
+                let row = reversedDiagonal - column + 1;
+                if (row <= 13 && row > 0) 
+                {
+                    let set = "i" + row + "-" + column;
+                    let cell = document.getElementById(set);
+                    if(cell)
+                    {
+                        let state = cell.getAttribute("title");
+                        diagonal_nm.push(state);
+                    }
+                }
+            }
+            for (let i = 0; i < diagonal_nm.length - 4; i++) {
+                if (diagonal_nm[i] !== "empty" && diagonal_nm[i + 1] === diagonal_nm[i] && diagonal_nm[i + 2] === diagonal_nm[i] && diagonal_nm[i + 3] === diagonal_nm[i] && diagonal_nm[i + 4] === diagonal_nm[i]) 
+                {
+                    document.write(diagonal_nm);
+                    break;
+                }
+            }
+        }
+        //check win with 5 in diagonals tr to bl by row
+        for (let diagonal = 1; diagonal <= 13; diagonal++) 
+        {
+            diagonal_nm = [];
+            for (let column = 1; column <= 13; column++) 
+            {
+                column2 = 14 - column;
+                let row = 13 - column2 + diagonal;
+                if (column2 <= 13 && column2 > 0) 
+                {
+                    let set = "i" + row + "-" + column2;
+                    let cell = document.getElementById(set);
+                    if(cell)
+                    {
+                        let state = cell.getAttribute("title");
+                        diagonal_nm.push(state);
+                    }
+                }
+            }
+            for (let i = 0; i < diagonal_nm.length - 4; i++) {
+                if (diagonal_nm[i] !== "empty" && diagonal_nm[i + 1] === diagonal_nm[i] && diagonal_nm[i + 2] === diagonal_nm[i] && diagonal_nm[i + 3] === diagonal_nm[i] && diagonal_nm[i + 4] === diagonal_nm[i]) 
+                {
+                    document.write(diagonal_nm);
+                    break;
+                }
+            }
+        }
+    }
+</script>
