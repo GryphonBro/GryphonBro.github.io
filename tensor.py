@@ -44,8 +44,9 @@ def html_grid_to_tensor():
 
     # Converte la lista dei dati in un tensore PyTorch
     tensor = torch.tensor(data).view(1, 13, 13)
+    tensor = jsonify(tensor.tolist())
 
-    return jsonify(tensor.tolist())
+    return tensor
 
 if __name__ == "__main__":
     app.run(debug=True)
