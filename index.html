@@ -739,14 +739,6 @@
         $.ajax({
             url: "script.py",
             context: document.body,
-            success: function(response) 
-            {
-                console.log("Risposta dal server:", response);
-            },
-            error: function(xhr, status, error) 
-            {
-                console.error("Errore durante la chiamata AJAX:", status, error);
-            }
         });
     }
 
