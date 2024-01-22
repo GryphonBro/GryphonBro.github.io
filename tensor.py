@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 def gridToTensor():
     with urllib.request.urlopen('https://gryphonbro.github.io/') as response:
-    html = response.read()
+        html = response.read()
 
     soup = BeautifulSoup(html, 'html.parser')
 
