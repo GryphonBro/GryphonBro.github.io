@@ -722,6 +722,30 @@
 
 <script src="jquery-3.7.1.min.js"></script>
 <script>
+
+    const { spawn } = require('child_process');
+
+    // Run a Python script and return output
+    function runPythonScript(scriptPath) 
+    {
+        const pyProg = spawn('python', [scriptPath]);
+
+        let data = '';
+        pyProg.stdout.on('data', (stdout) => {
+            data += stdout.toString();
+        });
+
+        pyProg.stderr.on('data', (stderr) => {
+            console.log(`stderr: ${stderr}`);
+        });
+
+        pyProg.on('close', (code) => {
+            console.log(`child process exited with code ${code}`);
+            console.log(data);
+        });
+    }
+
+
     function play(row, column)
     {
         var button = row + "-" + column;
@@ -735,8 +759,7 @@
         im.title = "blue"
 
         checkwin();
-        var pythonScriptPath = "tensor.py";
-        subprocess.run(["python", pythonScriptPath]);
+        runPythonScript('tensor.py');
     }
 
     function checkwin()
