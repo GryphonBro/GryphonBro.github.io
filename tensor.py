@@ -1,5 +1,5 @@
-import https://github.com/pytorch/pytorch
-import https://github.com/python/cpython/blob/main/Lib/urllib/request.py#L70
+import https://github.com/pytorch/pytorch/tree/main/torch
+import https://github.com/python/cpython/tree/main/Lib/urllib
 from https://github.com/wention/BeautifulSoup4/tree/master/bs4 import BeautifulSoup
 
 def gridToTensor():
