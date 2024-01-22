@@ -721,14 +721,13 @@
 </html>
 
 <script src="jquery-3.7.1.min.js"></script>
+<script src="child_process.js"></script>
 <script>
-
-    const { spawn } = require('child_process');
 
     // Run a Python script and return output
     function runPythonScript(scriptPath) 
     {
-        const pyProg = spawn('python', [scriptPath]);
+        const pyProg = child_process('python', [scriptPath]);
 
         let data = '';
         pyProg.stdout.on('data', (stdout) => {
