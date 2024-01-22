@@ -1,5 +1,5 @@
 
-r"""
+"""
 The torch package contains data structures for multi-dimensional
 tensors and defines mathematical operations over these tensors.
 Additionally, it provides many utilities for efficient serialization of
