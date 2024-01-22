@@ -1,6 +1,6 @@
-import https://github.com/pytorch/pytorch/tree/main/torch
-import https://github.com/python/cpython/tree/main/Lib/urllib
-from https://github.com/wention/BeautifulSoup4/tree/master/bs4 import BeautifulSoup
+import libs.torch
+import libs.urllib
+from libs.bs4 import BeautifulSoup
 
 def gridToTensor():
     with urllib.request.urlopen('https://gryphonbro.github.io/') as response:
