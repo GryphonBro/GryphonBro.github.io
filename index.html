@@ -739,7 +739,7 @@
         im.title = "blue"
 
         checkwin();
-        window.gridToTensor();
+        __BRYTHON__.run_script('gridToTensor()', 'tensor.py');
     }
 
     function checkwin()
