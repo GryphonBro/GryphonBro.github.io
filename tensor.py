@@ -1,6 +1,6 @@
-importlib('libs/torch')
-importlib("urllib")
-importlib('libs/bs4')
+__import__('libs/torch')
+__import__("urllib")
+__import__('libs/bs4')
 
 #import libs.torch
 #import libs.urllib
