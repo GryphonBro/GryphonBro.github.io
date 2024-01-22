@@ -1,4 +1,4 @@
-import torch
+import pytorch
 import urllib.request
 from bs4 import BeautifulSoup
 
