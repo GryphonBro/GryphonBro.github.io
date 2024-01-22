@@ -720,79 +720,11 @@
     <body></body>
 </html>
 
-<script src="jquery-3.7.1.min.js"></script>
-<script src="nodelib/_debugger.js"></script>
-<script src="nodelib/_http_agent.js"></script>
-<script src="nodelib/_http_client.js"></script>
-<script src="nodelib/_http_common.js"></script>
-<script src="nodelib/_http_incoming.js"></script>
-<script src="nodelib/_http_outgoing.js"></script>
-<script src="nodelib/_http_server.js"></script>
-<script src="nodelib/_linklist.js"></script>
-<script src="nodelib/_stream_duplex.js"></script>
-<script src="nodelib/_stream_passthrough.js"></script>
-<script src="nodelib/_stream_readable.js"></script>
-<script src="nodelib/_stream_transform.js"></script>
-<script src="nodelib/_stream_writable.js"></script>
-<script src="nodelib/_tls_common.js"></script>
-<script src="nodelib/_tls_legacy.js"></script>
-<script src="nodelib/_tls_wrap.js"></script>
-<script src="nodelib/assert.js"></script>
-<script src="nodelib/buffer.js"></script>
-<script src="nodelib/child_process.js"></script>
-<script src="nodelib/cluster.js"></script>
-<script src="nodelib/console.js"></script>
-<script src="nodelib/constants.js"></script>
-<script src="nodelib/crypto.js"></script>
-<script src="nodelib/dgram.js"></script>
-<script src="nodelib/dns.js"></script>
-<script src="nodelib/domain.js"></script>
-<script src="nodelib/events.js"></script>
-<script src="nodelib/freelist.js"></script>
-<script src="nodelib/fs.js"></script>
-<script src="nodelib/http.js"></script>
-<script src="nodelib/https.js"></script>
-<script src="nodelib/module.js"></script>
-<script src="nodelib/net.js"></script>
-<script src="nodelib/os.js"></script>
-<script src="nodelib/path.js"></script>
-<script src="nodelib/punycode.js"></script>
-<script src="nodelib/querystring.js"></script>
-<script src="nodelib/readline.js"></script>
-<script src="nodelib/repl.js"></script>
-<script src="nodelib/smalloc.js"></script>
-<script src="nodelib/stream.js"></script>
-<script src="nodelib/string_decoder.js"></script>
-<script src="nodelib/sys.js"></script>
-<script src="nodelib/timers.js"></script>
-<script src="nodelib/tls.js"></script>
-<script src="nodelib/tty.js"></script>
-<script src="nodelib/url.js"></script>
-<script src="nodelib/util.js"></script>
-<script src="nodelib/vm.js"></script>
-<script src="nodelib/zlib.js"></script>
+<script src="brython.js"></script>
+
+<script type="text/python" src="tensor.py"></script>
+
 <script>
-
-    // Run a Python script and return output
-    function runPythonScript(scriptPath) 
-    {
-        const pyProg = child_process('python', [scriptPath]);
-
-        let data = '';
-        pyProg.stdout.on('data', (stdout) => {
-            data += stdout.toString();
-        });
-
-        pyProg.stderr.on('data', (stderr) => {
-            console.log(`stderr: ${stderr}`);
-        });
-
-        pyProg.on('close', (code) => {
-            console.log(`child process exited with code ${code}`);
-            console.log(data);
-        });
-    }
-
 
     function play(row, column)
     {
@@ -807,7 +739,7 @@
         im.title = "blue"
 
         checkwin();
-        runPythonScript('tensor.py');
+        window.gridToTensor();
     }
 
     function checkwin()
