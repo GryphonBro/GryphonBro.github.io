@@ -1,7 +1,7 @@
 # Importa tutti i moduli nelle cartelle "bs4", "torch" e "urllib"
-import libs/bs4
-import libs/torch
-import libs/urllib
+import bs4
+import torch
+import urllib
 
 #import libs.torch
 #import libs.urllib
