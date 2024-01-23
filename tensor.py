@@ -1,21 +1,7 @@
-def importAllModules(folderPath):
-    # Ottieni l'elenco dei file nella cartella
-    file_list_script = "import os\nfiles = os.listdir('{folderPath}')"
-    __BRYTHON__.run_script(file_list_script)
-    files = locals()['files']
-    
-    # Importa tutti i moduli nella cartella
-    for file_name in files:
-        module_name = file_name.split('.')[0]  # Rimuovi l'estensione .py
-        module_path = folderPath + '/' + module_name
-        
-        # Usa __import__ per importare il modulo
-        __import__(module_path)
-
 # Importa tutti i moduli nelle cartelle "bs4", "torch" e "urllib"
-importAllModules('libs/bs4')
-importAllModules('libs/torch')
-importAllModules('libs/urllib')
+import libs/bs4
+import libs/torch
+import libs/urllib
 
 #import libs.torch
 #import libs.urllib
