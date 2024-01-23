@@ -1,5 +1,5 @@
 # Importa tutti i moduli nelle cartelle "bs4", "torch" e "urllib"
-import bs4
+#import bs4
 import torch
 import urllib
 
