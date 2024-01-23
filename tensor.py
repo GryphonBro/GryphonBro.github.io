@@ -1,6 +1,6 @@
 def importAllModules(folderPath):
     # Ottieni l'elenco dei file nella cartella
-    file_list_script = f"import os\nfiles = os.listdir('{folderPath}')"
+    file_list_script = "import os\nfiles = os.listdir('{folderPath}')"
     __BRYTHON__.run_script(file_list_script)
     files = locals()['files']
     
