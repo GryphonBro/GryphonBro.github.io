@@ -1,7 +1,7 @@
 # Importa tutti i moduli nelle cartelle "bs4", "torch" e "urllib"
-import bs4
-import torch
-import urllib
+from bs4 import *
+from torch import *
+from urllib import *
 
 def gridToTensor():
     with urllib.request.urlopen('https://gryphonbro.github.io/') as response:
